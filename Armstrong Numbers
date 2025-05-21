@@ -1,0 +1,30 @@
+//Armstrong Numbers
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+     
+     int num = 370;
+     int strong =370;
+     int rev =0;
+     int rem =0;
+     
+     while(num>0){
+       rem = num%10;
+       num = num/10;
+       
+        rev = rev + (rem*rem*rem);
+       
+     }
+     
+     
+     
+      if(rev == strong ){
+        cout<<("True");
+      }
+      else{
+        cout<<("False");
+      }
+}
