@@ -1,0 +1,31 @@
+class Solution {
+public:
+    int reverse(int x) {
+        
+        long long reverse=0;
+        long long rem=0;
+        
+        if(x>0){
+            while(x>0){
+            rem = x%10;
+            x= x/10;
+            reverse= (10* reverse) + rem;
+            }
+        }
+        else {
+            while(x<0){
+                rem = x%10;
+                x=x/10;
+                reverse = (10* reverse) + rem;
+                cout<<rem << "rem"<<endl;
+                cout<<reverse << "reverse" <<endl;
+            }
+        }
+        cout<<reverse;
+    if((reverse)<=(INT_MIN) || (reverse)>=(2147483647)){
+            return 0;
+        }
+        
+        return (reverse);
+    }
+};
