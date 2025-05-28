@@ -1,0 +1,31 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+array<int, 5> rev(array<int, 5> arr, int i, int j) {
+    if (i >= j) {
+        // Base case: array is reversed
+        return arr;
+    }
+
+    // Swap elements
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+
+    // Recurse
+    return rev(arr, i + 1, j - 1);
+}
+
+int main() {
+    array<int, 5> arr = {10, 15, 30, 20, 11};
+    array<int, 5> reversed = rev(arr, 0, 4);
+
+    // Print reversed array
+    for (int x : reversed) {
+        cout << x << endl;
+    }
+    cout << endl;
+
+    return 0;
+}
